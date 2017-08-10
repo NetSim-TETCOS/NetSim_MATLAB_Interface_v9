@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Always mention xml schema file in first line of configuration.xml-->
+<TETCOS_NETSIM xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="Configuration.xsd">
+  <EXPERIMENT_INFORMATION>
+    <VERSION>NetSimStandard</VERSION>
+    <USER>Admin</USER>
+    <NAME>Experiment</NAME>
+    <DATE>Thu Dec 08 12:46:36 IST 2016</DATE>
+    <COMMENT>-</COMMENT>
+  </EXPERIMENT_INFORMATION>
+  <GUI_INFORMATION>
+    <!-- The following three sections are used only for the GUI -->
+    <ENVIRONMENT_VIEWTYPE>Grid View</ENVIRONMENT_VIEWTYPE>
+    <MAP_POSITION>5478 3269</MAP_POSITION>
+    <ZOOM_LEVEL>1</ZOOM_LEVEL>
+    <NETWORK_NAME>MANET</NETWORK_NAME>
+    <ENVIRONMENT_LENGTH>500</ENVIRONMENT_LENGTH>
+  </GUI_INFORMATION>
+  <NETWORK_CONFIGURATION>
+    <!--The following section of config file is used to set the device properties-->
+    <DEVICE_CONFIGURATION DEVICE_COUNT="2">
+      <!--Set the  properties-->
+      <DEVICE DEVICE_ICON_PATH="C:\Program Files (x86)\NetSim Standard_9.0\Docs\Icons\WirelessNodeDrop.png" DEVICE_ID="1" DEVICE_NAME="Wireless Node A" DEVICE_TYPE="WirelessNode_1" INTERFACE_COUNT="1" TYPE="NODE" WIRESHARK_OPTION="Disable">
+        <POS_3D X_OR_LON="89.0" Y_OR_LAT="102.0" Z="0">
+          <MOBILITY MODEL="RANDOM_WAY_POINT" PAUSE_TIME="1" VELOCITY="10"/>
+        </POS_3D>
+        <INTERFACE ID="1" INTERFACE_TYPE="WIRELESS">
+          <LAYER TYPE="NETWORK_LAYER">
+            <NETWORK_PROTOCOL NAME="IPV4" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY DEFAULT_GATEWAY="" IP_ADDRESS="10.0.0.1" SUBNET_MASK="255.255.0.0"/>
+            </NETWORK_PROTOCOL>
+            <PROTOCOL NAME="ARP" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY ARP_RETRY_INTERVAL="10" ARP_RETRY_LIMIT="3"/>
+            </PROTOCOL>
+          </LAYER>
+          <LAYER TYPE="DATALINK_LAYER">
+            <PROTOCOL NAME="IEEE802.11" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY IEEE802.11e="Enable" MAC_ADDRESS="80C117DD8708" RATE_ADAPTATION="true" RETRY_LIMIT="4" RTS_THRESHOLD="8000"/>
+            </PROTOCOL>
+          </LAYER>
+          <LAYER TYPE="PHYSICAL_LAYER">
+            <PROTOCOL NAME="IEEE802.11" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY BANDWIDTH="20" CONNECTION_MEDIUM="WIRELESS" CW_MAX="1023" CW_MIN="31" FREQUENCY_BAND="2.4" SIFS="10" SLOT_TIME="20" STANDARD="IEEE802.11b" STANDARD_CHANNEL="1_2412" TX_POWER="100" TX_TYPE="DSSS">
+                <POWER SOURCE="Main_Line"/>
+              </PROTOCOL_PROPERTY>
+            </PROTOCOL>
+          </LAYER>
+        </INTERFACE>
+        <LAYER TYPE="APPLICATION_LAYER"/>
+        <LAYER TYPE="TRANSPORT_LAYER">
+          <PROTOCOL NAME="TCP" SETPROPERTY="false">
+            <PROTOCOL_PROPERTY ACKNOWLEDGEMENT_TYPE="Undelayed" CONGESTION_ALGORITHM="OLD_TAHOE" TCP_MSS="1460" WINDOW_SIZE="8"/>
+          </PROTOCOL>
+          <PROTOCOL NAME="UDP" SETPROPERTY="true">
+            <PROTOCOL_PROPERTY SEGMENT_SIZE="1472"/>
+          </PROTOCOL>
+        </LAYER>
+        <LAYER TYPE="NETWORK_LAYER">
+          <ROUTING_PROTOCOL NAME="DSR" SETPROPERTY="true">
+            <PROTOCOL_PROPERTY ACK_TYPE="LINK_LAYER_ACK"/>
+          </ROUTING_PROTOCOL>
+        </LAYER>
+      </DEVICE>
+      <!--End of  properties-->
+      <!--Set the  properties-->
+      <DEVICE DEVICE_ICON_PATH="C:\Program Files (x86)\NetSim Standard_9.0\Docs\Icons\WirelessNodeDrop.png" DEVICE_ID="2" DEVICE_NAME="Wireless Node B" DEVICE_TYPE="WirelessNode_1" INTERFACE_COUNT="1" TYPE="NODE" WIRESHARK_OPTION="Disable">
+        <POS_3D X_OR_LON="196.0" Y_OR_LAT="71.0" Z="0">
+          <MOBILITY MODEL="RANDOM_WAY_POINT" PAUSE_TIME="1" VELOCITY="10"/>
+        </POS_3D>
+        <INTERFACE ID="1" INTERFACE_TYPE="WIRELESS">
+          <LAYER TYPE="NETWORK_LAYER">
+            <NETWORK_PROTOCOL NAME="IPV4" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY DEFAULT_GATEWAY="" IP_ADDRESS="10.0.0.2" SUBNET_MASK="255.255.0.0"/>
+            </NETWORK_PROTOCOL>
+            <PROTOCOL NAME="ARP" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY ARP_RETRY_INTERVAL="10" ARP_RETRY_LIMIT="3"/>
+            </PROTOCOL>
+          </LAYER>
+          <LAYER TYPE="DATALINK_LAYER">
+            <PROTOCOL NAME="IEEE802.11" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY IEEE802.11e="Enable" MAC_ADDRESS="BBC1014059B0" RATE_ADAPTATION="true" RETRY_LIMIT="4" RTS_THRESHOLD="8000"/>
+            </PROTOCOL>
+          </LAYER>
+          <LAYER TYPE="PHYSICAL_LAYER">
+            <PROTOCOL NAME="IEEE802.11" SETPROPERTY="true">
+              <PROTOCOL_PROPERTY BANDWIDTH="20" CONNECTION_MEDIUM="WIRELESS" CW_MAX="1023" CW_MIN="31" FREQUENCY_BAND="2.4" SIFS="10" SLOT_TIME="20" STANDARD="IEEE802.11b" STANDARD_CHANNEL="1_2412" TX_POWER="100" TX_TYPE="DSSS">
+                <POWER SOURCE="Main_Line"/>
+              </PROTOCOL_PROPERTY>
+            </PROTOCOL>
+          </LAYER>
+        </INTERFACE>
+        <LAYER TYPE="APPLICATION_LAYER"/>
+        <LAYER TYPE="TRANSPORT_LAYER">
+          <PROTOCOL NAME="TCP" SETPROPERTY="false">
+            <PROTOCOL_PROPERTY ACKNOWLEDGEMENT_TYPE="Undelayed" CONGESTION_ALGORITHM="OLD_TAHOE" TCP_MSS="1460" WINDOW_SIZE="8"/>
+          </PROTOCOL>
+          <PROTOCOL NAME="UDP" SETPROPERTY="true">
+            <PROTOCOL_PROPERTY SEGMENT_SIZE="1472"/>
+          </PROTOCOL>
+        </LAYER>
+        <LAYER TYPE="NETWORK_LAYER">
+          <ROUTING_PROTOCOL NAME="DSR" SETPROPERTY="true">
+            <PROTOCOL_PROPERTY ACK_TYPE="LINK_LAYER_ACK"/>
+          </ROUTING_PROTOCOL>
+        </LAYER>
+      </DEVICE>
+      <!--End of  properties-->
+    </DEVICE_CONFIGURATION>
+    <!--The following section of config file is used to set the Connection between Devices-->
+    <CONNECTION>
+      <!--A connection is between two device or more device-->
+      <!--Up link is considered as first device to second device-->
+      <!--Down link is considered as second device to first device-->
+      <LINK DEVICE_COUNT="2" LINK_ID="1" LINK_MODE="HALF_DUPLEX" MEDIUM="WIRELESS" TYPE="MULTIPOINT_TO_MULTIPOINT">
+        <DEVICE INTERFACE_ID="1" NAME="Wireless Node B"/>
+        <DEVICE INTERFACE_ID="1" NAME="Wireless Node A"/>
+        <MEDIUM_PROPERTY CHANNEL_CHARACTERISTICS="FADING_AND_SHADOWING" CHANNEL_NUMBER="1" FADING_FIGURE="1" PATH_LOSS_EXPONENT="2" STANDARD_DEVIATION="5"/>
+      </LINK>
+    </CONNECTION>
+    <!--The following section of config file is used to set the Traffic generator-->
+    <APPLICATION_CONFIGURATION COUNT="1">
+      <APPLICATION APPLICATION_TYPE="CBR" DESTINATION_COUNT="1" DESTINATION_ID="1" END_TIME="100000" ID="1" SHOW_LINE="SHOW LINE" SOURCE_COUNT="1" SOURCE_ID="2" START_TIME="0">
+        <PACKET_SIZE DISTRIBUTION="CONSTANT" VALUE="1460"/>
+        <INTER_ARRIVAL_TIME DISTRIBUTION="CONSTANT" VALUE="20000"/>
+      </APPLICATION>
+    </APPLICATION_CONFIGURATION>
+  </NETWORK_CONFIGURATION>
+  <!--Set Simulation_Parameters properties-->
+  <SIMULATION_PARAMETER SIMULATION_EXIT_TYPE="Time" SIMULATION_TIME="100">
+    <!--Configure the seed set-->
+    <SEED SEED1="12345678" SEED2="23456789"/>
+    <ANIMATION STATUS="ENABLE"/>
+  </SIMULATION_PARAMETER>
+  <!--<html>The following section allow to configure parameters of protocol<br>that is globally defined or common for all the devices</html>-->
+  <!--Configure the Static IP Forwarding-->
+  <!--Configure the static ARP-->
+  <PROTOCOL_CONFIGURATION>
+    <PROTOCOL NAME="IPV4">
+      <STATIC_IP_FORWARDING_TABLE FILE="" STATUS="DISABLE"/>
+    </PROTOCOL>
+    <PROTOCOL NAME="ARP">
+      <STATIC_ARP FILE="" STATUS="ENABLE"/>
+    </PROTOCOL>
+  </PROTOCOL_CONFIGURATION>
+  <STATISTICS_COLLECTION>
+    <PACKET_TRACE FILE_NAME="." FILE_PATH="." STATUS="DISABLE"/>
+    <EVENT_TRACE FILE_NAME="." FILE_PATH="." STATUS="DISABLE">
+      <FILTER/>
+    </EVENT_TRACE>
+  </STATISTICS_COLLECTION>
+</TETCOS_NETSIM>

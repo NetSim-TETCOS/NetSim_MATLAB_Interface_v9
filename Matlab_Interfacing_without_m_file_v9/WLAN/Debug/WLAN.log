@@ -1,0 +1,63 @@
+﻿Build started 27-02-2017 14:31:39.
+     1>Project "C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\WLAN\WLAN.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\WLAN.lastbuildstate".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+         Creating directory "..\Dll\".
+       InitializeBuildStatus:
+         Creating "Debug\WLAN.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Include /I"C:\Program Files (x86)\MATLAB\R2011a\extern\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D WLAN_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt 802_11ac.c 802_11ag.c 802_11b.c 802_11e.c 802_11n.c 802_11n_acAggregation.c 802_11_MAC.c 802_11_PHY.c MATLAB_Interface.c PMD_RX_Specification_802_11abgnac.c PowerModel.c WLan.c
+         WLan.c
+     1>c:\users\upal\desktop\file exchange updates\v9.0\netsim_matlab_interface\matlab_interfacing_without_m_file_v9\wlan\wlan.c(147): warning C4550: expression evaluates to a function which is missing an argument list
+         PowerModel.c
+         PMD_RX_Specification_802_11abgnac.c
+         MATLAB_Interface.c
+     1>c:\users\upal\desktop\file exchange updates\v9.0\netsim_matlab_interface\matlab_interfacing_without_m_file_v9\wlan\matlab_interface.c(46): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\upal\desktop\file exchange updates\v9.0\netsim_matlab_interface\matlab_interfacing_without_m_file_v9\wlan\matlab_interface.c(50): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+         802_11_PHY.c
+         802_11_MAC.c
+         802_11n_acAggregation.c
+         802_11n.c
+         802_11e.c
+         802_11b.c
+         802_11ag.c
+         802_11ac.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\WLAN\..\Dll\WLAN.dll) does not match the Linker's OutputFile property value (C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\Dll\libWLAN.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(WLAN) does not match the Linker's OutputFile property value (libWLAN). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\Dll\libWLAN.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\lib /LIBPATH:"C:\Program Files (x86)\MATLAB\R2011a\extern\lib\win32\microsoft" libeng.lib libmx.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\WLAN.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\Dll\WLAN.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\Dll\WLAN.lib" /MACHINE:X86 /DLL Debug\802_11ac.obj
+         Debug\802_11ag.obj
+         Debug\802_11b.obj
+         Debug\802_11e.obj
+         Debug\802_11n.obj
+         Debug\802_11n_acAggregation.obj
+         Debug\802_11_MAC.obj
+         Debug\802_11_PHY.obj
+         Debug\MATLAB_Interface.obj
+         Debug\PMD_RX_Specification_802_11abgnac.obj
+         Debug\PowerModel.obj
+         Debug\WLan.obj WLAN.lib NetworkStack.lib Metrics.lib Mobility.lib 
+     1>802_11ac.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+         WLAN.lib(WLanLib.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>802_11ac.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+            Creating library ..\Dll\WLAN.lib and object ..\Dll\WLAN.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+     1>WLAN.lib(WLanLib.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'WLAN.lib(WLanLib.obj)' or at 'C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\Dll\vc100.pdb'; linking object as if no debug info
+     1>ErrorModel.lib(ber.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'ErrorModel.lib(ber.obj)' or at 'C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\Dll\vc100.pdb'; linking object as if no debug info
+         WLAN.vcxproj -> C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\WLAN\..\Dll\WLAN.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\Dll\libWLAN.dll;#2" /manifest Debug\WLAN.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\WLAN.unsuccessfulbuild".
+         Touching "Debug\WLAN.lastbuildstate".
+     1>Done Building Project "C:\Users\UPAL\Desktop\File Exchange Updates\v9.0\NetSim_MATLAB_Interface\Matlab_Interfacing_without_m_file_v9\WLAN\WLAN.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.88
